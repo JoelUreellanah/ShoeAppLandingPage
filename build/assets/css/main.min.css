@@ -203,7 +203,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 20px 60px;
+  padding: 15px 30px;
   color: black;
   text-align: center;
   font-size: 14px;
@@ -212,10 +212,11 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
   box-sizing: border-box;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  box-shadow: 0 20px 12px -15px rgba(0, 0, 0, 0.2); }
   .button:hover, .button:active, .button:focus,
   button:hover,
   button:active,
@@ -371,6 +372,31 @@ hr {
     list-style: none; }
   #brands ul li img {
     width: 100%; }
+
+.discountImage {
+  height: 600px; }
+
+#discount {
+  margin-top: 65px; }
+
+.discountLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .discountLayout .offer {
+    width: 40%;
+    margin: 0 auto; }
+  .discountLayout .offer .button {
+    background: #009efd;
+    background: linear-gradient(140deg, #009efd 0%, #15c9cb 48%, #2af598 100%);
+    color: white;
+    padding: 10px 80px;
+    font-size: 18px; }
+
+#download {
+  background: #5825ec;
+  padding: 100px 0;
+  margin-top: -50px; }
 
 .flex-video {
   height: 0;
