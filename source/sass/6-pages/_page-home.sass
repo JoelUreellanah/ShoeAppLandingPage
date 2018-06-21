@@ -6,6 +6,9 @@
   text-align: center
   overflow: hidden
 
+  @media only screen and (max-width: 680px)
+    height: 600px
+
   img
     max-width: 500px
     width: 100%
@@ -14,33 +17,18 @@
     width: 80%
     margin: 0 auto
 
+    @media only screen and (max-width: 680px)
+      width: 100%
+
     h1
       margin-bottom: 10px
+      @media only screen and (max-width: 680px)
+        margin-top: 60px
 
-.main-nav
-  display: flex
-  margin-top: 20px
-
-  li
-    list-style: none
-
-  li:first-child
-    margin-right: auto
-
-  a
-    color: white
-    display: block
-    border-radius: 4px
-    padding: 10px 50px
-    text-decoration: none
-    font-weight: 900
-    text-transform: uppercase
-
-  a.download
-    background: white
-    color: $ocean
-    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2)
-
+    p
+      font-weight: 500
+      @media only screen and (max-width: 680px)
+        margin-top: 60px
 
 .headline-image
   height: 830px

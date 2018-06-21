@@ -1,4 +1,50 @@
 #download
-  background: #5825ec
+  color: white
+  text-align: center
+  background: url("../img/downloadBackground.jpg") no-repeat
+  background-size: cover
+  background-position: center
   padding: 100px 0
-  margin-top: -50px
+  margin-top: -70px
+  @media only screen and (max-width: 680px)
+    margin-top: 75px
+    padding: 60px
+
+  h2
+    font-size: 68px
+    margin: 0
+    text-transform: uppercase
+    font-weight: 900
+    @media only screen and (max-width: 680px)
+      background: url("../img/downloadBackgroundSmall.jpg") no-repeat
+      font-size: 44px
+      
+
+  p
+    width: 100%
+    margin: 20px auto
+    font-weight: 900
+
+  .button
+    position: relative
+    width: 250px
+    margin: 0 20px
+    padding-left: 50px
+
+    @media only screen and (max-width: 680px)
+      margin: 10px 15px
+
+
+  .apple:before
+    position: absolute
+    display: block
+    left: 22%
+    top: 11px
+    content: url("../img/appleicon.png")
+
+  .google:before
+    position: absolute
+    display: block
+    left: 22%
+    top: 14px
+    content: url("../img/playicon.png")

@@ -190,7 +190,7 @@ html {
   box-sizing: inherit; }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1100px;
   margin: 0 auto; }
 
@@ -319,11 +319,79 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+.main-nav {
+  display: flex;
+  margin-top: 20px;
+  padding: 0;
+  transition: all 0.2s ease; }
+  .main-nav li {
+    list-style: none;
+    display: inline-block; }
+  .main-nav li:first-child {
+    margin-right: auto; }
+  .main-nav a {
+    color: white;
+    display: block;
+    border-radius: 4px;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.2s ease; }
+  .main-nav a:hover, .main-nav a:active {
+    color: #00adff; }
+  .main-nav li:first-child {
+    margin-right: auto;
+    padding: 10px 0; }
+    .main-nav li:first-child a {
+      padding: 0; }
+  .main-nav a.download {
+    background: white;
+    color: #00adff;
+    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2); }
+
+li.nav-toggle {
+  display: none; }
+  li.nav-toggle a {
+    padding-right: 0; }
+
+@media screen and (max-width: 750px) {
+  li.nav-toggle {
+    display: block;
+    z-index: 100; }
+  .responsive-nav {
+    display: none; }
+  .responsive-nav.unfold {
+    display: block;
+    width: 100%;
+    background: #1f1f1f;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .responsive-nav.unfold li {
+    display: block; }
+  .responsive-nav.unfold a {
+    padding: 40px;
+    display: block;
+    text-align: center; }
+  .responsive-nav.unfold a:hover {
+    transform: translate(0);
+    color: #00adff; }
+  .responsive-nav.unfold a.download {
+    background: inherit;
+    color: white;
+    margin-left: 0; }
+  .responsive-nav.unfold a.download:hover {
+    color: #00adff; } }
+
 #features {
   background: #f9f9f9;
   text-align: center;
   position: relative;
   height: 500px; }
+  @media only screen and (max-width: 680px) {
+    #features {
+      height: auto; } }
   #features:after {
     bottom: 0;
     position: absolute;
@@ -342,6 +410,9 @@ hr {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 30px; }
+  @media only screen and (max-width: 680px) {
+    .cards {
+      grid-template-columns: repeat(1, auto); } }
 
 .feature-card {
   background: white;
@@ -383,9 +454,20 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 680px) {
+    .discountLayout {
+      display: block; } }
+  @media only screen and (max-width: 680px) {
+    .discountLayout img {
+      width: 100%;
+      max-width: 400px; } }
   .discountLayout .offer {
     width: 40%;
     margin: 0 auto; }
+    @media only screen and (max-width: 680px) {
+      .discountLayout .offer {
+        width: 100%;
+        text-align: center; } }
   .discountLayout .offer .button {
     background: #009efd;
     background: linear-gradient(140deg, #009efd 0%, #15c9cb 48%, #2af598 100%);
@@ -394,9 +476,59 @@ hr {
     font-size: 18px; }
 
 #download {
-  background: #5825ec;
+  color: white;
+  text-align: center;
+  background: url("../img/downloadBackground.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 100px 0;
-  margin-top: -50px; }
+  margin-top: -70px; }
+  @media only screen and (max-width: 680px) {
+    #download {
+      margin-top: 75px;
+      padding: 60px; } }
+  #download h2 {
+    font-size: 68px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900; }
+    @media only screen and (max-width: 680px) {
+      #download h2 {
+        background: url("../img/downloadBackgroundSmall.jpg") no-repeat;
+        font-size: 44px; } }
+  #download p {
+    width: 100%;
+    margin: 20px auto;
+    font-weight: 900; }
+  #download .button {
+    position: relative;
+    width: 250px;
+    margin: 0 20px;
+    padding-left: 50px; }
+    @media only screen and (max-width: 680px) {
+      #download .button {
+        margin: 10px 15px; } }
+  #download .apple:before {
+    position: absolute;
+    display: block;
+    left: 22%;
+    top: 11px;
+    content: url("../img/appleicon.png"); }
+  #download .google:before {
+    position: absolute;
+    display: block;
+    left: 22%;
+    top: 14px;
+    content: url("../img/playicon.png"); }
+
+#footer {
+  text-align: center;
+  padding: 60px 0; }
+  #footer li {
+    list-style: none; }
+    #footer li a {
+      padding: 0 20px;
+      text-transform: uppercase; }
 
 .flex-video {
   height: 0;
@@ -422,34 +554,28 @@ hr {
   color: white;
   text-align: center;
   overflow: hidden; }
+  @media only screen and (max-width: 680px) {
+    #header {
+      height: 600px; } }
   #header img {
     max-width: 500px;
     width: 100%; }
   #header article {
     width: 80%;
     margin: 0 auto; }
+    @media only screen and (max-width: 680px) {
+      #header article {
+        width: 100%; } }
     #header article h1 {
       margin-bottom: 10px; }
-
-.main-nav {
-  display: flex;
-  margin-top: 20px; }
-  .main-nav li {
-    list-style: none; }
-  .main-nav li:first-child {
-    margin-right: auto; }
-  .main-nav a {
-    color: white;
-    display: block;
-    border-radius: 4px;
-    padding: 10px 50px;
-    text-decoration: none;
-    font-weight: 900;
-    text-transform: uppercase; }
-  .main-nav a.download {
-    background: white;
-    color: #00adff;
-    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2); }
+      @media only screen and (max-width: 680px) {
+        #header article h1 {
+          margin-top: 60px; } }
+    #header article p {
+      font-weight: 500; }
+      @media only screen and (max-width: 680px) {
+        #header article p {
+          margin-top: 60px; } }
 
 .headline-image {
   height: 830px; }
